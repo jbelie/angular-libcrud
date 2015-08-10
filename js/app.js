@@ -1,3 +1,3 @@
 'use strict';
 
-var app = angular.module('angular-libcrud', ['ngRoute']);
+var app = angular.module('angular-libcrud', ['ngRoute', 'firebase']);

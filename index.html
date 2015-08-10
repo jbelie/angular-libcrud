@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>CRUD application || AngularJS - Démo</title>
 	</head>
-	<body ng-app="angular-libcrud">
+	<body ng-app="angular-libcrud" check-user>
 		<nav id="menu">
 			<ul> 
 				<li><a href='#/items'>Items list</a></li>
@@ -20,6 +20,10 @@
 			<!--Vendor-->
 			<script src="bower_components/angular/angular.min.js"></script>
 			<script src="bower_components/angular-route/angular-route.min.js"></script>
+			<script src="bower_components/firebase/firebase.js"></script>
+			<script src="bower_components/angularfire/dist/angularfire.js"></script>
+			<script src="bower_components/firebase-simple-login/firebase-simple-login.js"></script>
+
 
 			<!--App-->
 			<script src="js/app.js"></script>
@@ -28,14 +32,17 @@
 			<!--Controllers-->
 			<script src="js/src/controllers/categoryController.js"></script>
 			<script src="js/src/controllers/itemController.js"></script>
+			<script src="js/src/controllers/indexController.js"></script>
 			
 			<!--Providers-->
 			<script src="js/src/services/itemProvider.js"></script>
 			<script src="js/src/services/categoryProvider.js"></script>
+			<script src="js/src/services/userProvider.js"></script>
 						
 			<!--Directives-->
 			<script src="js/src/directives/itemDecorator.js"></script>
 			<script src="js/src/directives/categoryDecorator.js"></script>
+			<script src="js/src/directives/checkUser.js"></script>
 		</section>	
 	</body>
 </html>

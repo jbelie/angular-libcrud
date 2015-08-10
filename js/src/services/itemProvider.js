@@ -1,35 +1,27 @@
 'use strict';
 
-var items = [
-	{ 
-		'name' : 'Star Wars - A new hope',
-		'category_id' : 1
-	},
-	{
-		'name' : 'Back to the future II',
-		'category_id' : 1
-	},
-	{
-		'name' : 'Batman : The Dark Knight',
-		'category_id' : 1
-	},
-	{ 
-		'name' : 'Oasis - Definitly Maybe',
-		'category_id' : 2
-	},
-	{
-		'name' : 'The Beatles - White Album',
-		'category_id' : 2
-	}
-];
 
-app.service('itemProvider', function(){
-	
+app.service('itemProvider', function($firebaseArray){
+	var ref = new Firebase("https://burning-inferno-8229.firebaseio.com/items/");
+	var sync = $firebaseArray(ref);
+	var items = sync;
+
+
 	this.getItems = function(){
 		return items;
 	}
-	
+
 	this.addItem = function(item){
-		items.push(item);
+		items.$add(item);
 	}
+		
+	this.removeItem = function(item){
+		items.$remove(item);
+	}
+		
+	this.updateItem = function(item){
+		items.$save(item);
+	}
+
+
 });

@@ -4,18 +4,33 @@ app
 	.controller('categoryIndex', function($scope){
 		
 	})
-	.controller('categoryList', function($scope, categoryProvider){
+	.controller('categoryList', function($scope, $location, $rootScope, categoryProvider){
 		
 		$scope.categorys = categoryProvider.getCategories();
 		
-	})
-	.controller('categoryCreate', function($scope, categoryProvider){
+		$scope.removeCategory = function(category){
+			categoryProvider.removeCategory(category);
+		}
 		
-		$scope.createCategory = function(category){
+		$scope.editCategory = function(category){
+			$rootScope.categoryToEdit = category;
+			$location.url('/category/edit');
+		}
+	})
+	.controller('categoryCreate', function($scope, $location, categoryProvider){
+		
+		$scope.saveCategory = function(category){
 			categoryProvider.addCategory(category);
+			$location.url('/categories');
 		}
 		
 	})
-	.controller('categoryRemove', function($scope){
+	.controller('categoryEdit', function($scope, $rootScope, $location, categoryProvider){
+		$scope.category = $rootScope.categoryToEdit;
 		
-	});
+		$scope.saveCategory = function(category){
+			categoryProvider.updateCategory(category);
+			$location.url('/categories');
+		}
+		
+	})

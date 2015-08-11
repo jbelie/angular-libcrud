@@ -1,5 +1,5 @@
-<div id="item-list">
-	<div ng-repeat="item in items">
-		<item-decorate></item-decorate>
-	</div>
-</div> 
+<h2>Items list</h2>
+<ul id="item-list" class="two-colors-list presentation-list">
+	<item-decorate ng-repeat="item in items"></item-decorate>
+	<li ng-show='!items.length'>No items</li>
+</ul> 

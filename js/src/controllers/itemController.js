@@ -19,7 +19,7 @@ app
 		$scope.categories = categoryProvider.getCategories();
 		$scope.items = itemProvider.getItems();
 		
-		$scope.createItem = function(item){
+		$scope.saveItem = function(item){
 			itemProvider.addItem(item);
 			$location.url('/items');
 		}

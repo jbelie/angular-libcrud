@@ -3,7 +3,8 @@
 app.directive('categoryDecorate',function(){
 		return{
 			"templateUrl": "views/category/directive/decorator.html",
-			"restrict" : "E"
+			"replace"	: true,
+			"restrict" 	: "E"
 		}
 	}
 );

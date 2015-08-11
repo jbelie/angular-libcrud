@@ -1,6 +1,17 @@
-<form>
-	<label>Name</label>
-	<input type="text" name="name" ng-model="category.name" />
+<form class="form-horizontal">
 	
-	<button ng-click="saveCategory(category)">Save</button>
+	<div class="form-group">
+		<label for="name" class="col-md-2 control-label">Name</label>
+		<div class="col-md-10">
+			<input type="text" class="form-control"  id="name" placeholder="Name" ng-model="category.name" />
+		</div>
+	</div>
+	
+	<button ng-click="saveCategory(category)" class="button">
+		<span class="glyphicon glyphicon-floppy-disk"></span>
+		Save
+	</button>
+
+	<div class="clearfix"></div>
+	
 </form>

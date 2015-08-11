@@ -1,12 +1,62 @@
-<form ng-hide="session.token">
-	<label>Email</label>
-	<input type="email" ng-model="user.email" name="email"/>
+<h2 ng-hide="session.token">Authentication required</h2>
+
+<form ng-hide="session.token" class="form-horizontal">
+	<div class="form-group">
+		<label for="email" class="col-sm-2 control-label">Email</label>
+		<div class="col-sm-10">
+		  <input type="email" class="form-control"  id="email" placeholder="Email" ng-model="user.email">
+		</div>
+	</div>
 	
-	<label>Password</label>
-	<input type="password" ng-model="user.password" name="password">
+	<div class="form-group">
+		<label for="password" class="col-sm-2 control-label">Password</label>
+		<div class="col-sm-10">
+		  <input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password">
+		</div>
+	</div>
 	
-	<button ng-click="authUser(user)">Login</button> 
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<a href='#/create-user'>Register</a>
+		</div>
+	</div>
+	  
+	
+	<button ng-click="authUser(user)" class="button">Login</button> 
 </form>
 
 
-<button ng-show="session.token" ng-click="logout()">Logout</button>
+<div id="logout" ng-show="session.token">
+	<span class="bold">Hello {{ session.password.email }},</span>
+	
+	<ul id="menu-home" class="two-colors-list two-colors-list-hover"> 
+		<li class="odd">
+			<a href='#/items'>
+				<span class="glyphicon glyphicon-list"></span>
+				Items list
+			</a>
+		</li>
+		<li class="even">
+			<a href='#/item/new'>
+				<span class="glyphicon glyphicon-plus"></span>
+				New item
+			</a>
+		</li>
+		<li class="odd">
+			<a href='#/categories'>
+				<span class="glyphicon glyphicon-list"></span>
+				Categories list
+			</a>
+		</li>
+		<li class="even">
+			<a href='#/category/new'>
+				<span class="glyphicon glyphicon-plus"></span>
+				New category
+			</a>
+		</li>
+	</ul>
+	<button ng-click="logout()" class="button">
+		<span class="glyphicon glyphicon-remove-sign"></span>
+		Logout
+	</button>
+</div>

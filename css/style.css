@@ -1,0 +1,170 @@
+body{
+	background-color:#E4E4E4;
+	font-family:arial,sans-serif;
+	font-size:14px;
+	color:#333;
+}
+
+h1{
+	color:#FFF;
+	text-align:center;
+	background-color:#52CEB7;
+	font-weight:bold;
+	padding:10px 0;
+	margin:0;
+}
+
+ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+.bold{
+	font-weight:bold;
+}
+.light-gray{
+	color:#EEE;
+}
+.light-black{
+	color:#666;
+}
+.red{
+	color:red;
+}
+.light-red{
+	color:#D8838D;
+}
+.green{
+	color:#5FEF37;
+}
+
+/* App */
+.container{
+	max-width:800px;
+}
+#app{
+    box-shadow: 0 0 10px 0 rgba(50, 50, 50, 0.75);
+    margin: 20px auto 20px;
+    max-width: 1000px;
+    background-color:#FFF;
+}
+
+#app-content{
+	padding:20px;
+}
+
+/* Nav */
+#menu{
+	background-color:#74D9C7;
+	color:#FFF;
+	margin:0px;
+	padding:5px 0;
+}
+#menu ul{
+	margin:0px;
+	padding:5px 0px;
+	text-align:center;
+}
+#menu ul li{
+	display:inline;
+}
+#menu a{
+	color:#FFF;
+	padding:5px;
+	border-radius:3px;
+	background-color:#6BBEAF;
+}
+#menu a:hover{
+	text-decoration:none;
+	background-color:#8EC3BA;
+}
+#menu a .glyphicon{
+	margin:0 6px 0px 0;
+}
+#menu a .glyphicon-home{
+	margin:0px;
+	padding:0px;
+}
+
+/* Content */
+h2{
+	margin:0 0 20px 0;
+	font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+
+.button{
+	background-color:#f46547;
+	height:34px;
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+	text-align:center;
+	color:#FFF;
+	border:0px solid #FFF;
+	width:100%;
+	margin:10px 0;
+}
+.button:hover{
+	background-color:#F47358;
+}
+.button span{
+	margin-right:5px;
+}
+
+ul.two-colors-list li.odd{
+	background-color:#FFF;
+}
+ul.two-colors-list li.even{
+	background-color:#F7F7F7;
+}
+ul.two-colors-list-hover li.odd:hover{
+	background-color:#E7E7E7;
+}
+ul.two-colors-list-hover li.even:hover{
+	background-color:#EEE;
+}
+
+/* Index */
+#menu-home{
+	margin:10px 0;
+}
+#menu-home li{
+	padding:8px;
+}
+#menu-home li a{
+	color:#666;
+	width:100%;
+	display:block;
+}
+#menu-home li a:hover{
+	text-decoration:none;
+}
+#menu-home li a span{
+	margin:0 8px 0 0;
+}
+
+/* List cat & Item */
+.presentation-list{}
+.presentation-list li{
+	padding:8px;
+}
+
+.presentation-list .button-inline{
+	border:0px solid #FFF;
+	background:transparent;
+	color:#BBB;
+	padding:0px 10px;
+	text-align:right;
+	display:block;
+	width:100%;
+}
+.presentation-list .button-inline:hover{
+	background-color:#EEE;
+	color:#666;
+}
+.presentation-list .button-inline .glyphicon{
+	margin-right:8px;
+}

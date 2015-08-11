@@ -1,10 +1,22 @@
-<form>
-	<label>Name</label>
-	<input type="text" name="name" ng-model="item.name" />
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="name" class="col-sm-2 control-label">Name</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control"  id="name" placeholder="Name" ng-model="item.name" />
+		</div>
+	</div>
 	
-	<label>Category</label>
-	<select ng-model="item.category_id" ng-options="category.id as category.name for category in categories">
-	</select>
-	
-	<button ng-click="saveItem(item)">Save</button>
+	<div class="form-group">
+		<label for="category_id" class="col-sm-2 control-label">Category</label>
+		<div class="col-sm-10">
+			<select ng-model="item.category_id" ng-options="category.id as category.name for category in categories" class="form-control">
+			</select>
+		</div>
+	</div>
+
+
+	<button ng-click="saveItem(item)" class="button">
+		<span class="glyphicon glyphicon-floppy-disk"></span>
+		Save
+	</button>
 </form>

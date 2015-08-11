@@ -3,18 +3,29 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+		<link href='css/style.css' rel='stylesheet' type='text/css'>
+		
 		<title>CRUD application || AngularJS - Démo</title>
 	</head>
 	<body ng-app="angular-libcrud" check-user>
-		<nav id="menu">
-			<ul> 
-				<li><a href='#/items'>Items list</a></li>
-				<li><a href='#/item/new'>New item</a></li>
-				<li><a href='#/categories'>Categories list</a></li>
-				<li><a href='#/category/new'>New category</a></li>
-			</ul>
-		</nav>
-		<div ng-view></div>
+		
+		<div class="container">
+			<div id="app">
+				<h1>Library CRUD</h1>
+				<nav id="menu">
+					<ul> 
+						<li><a href='#/'><span class="glyphicon glyphicon-home"></span></a></li>
+						<li><a href='#/items'>Items&nbsp;List</a></li>
+						<li><a href='#/item/new'>New&nbsp;Item</a></li>
+						<li><a href='#/categories'>Categories&nbsp;List</a></li>
+						<li><a href='#/category/new'>New&nbsp;Category</a></li>
+					</ul>
+				</nav>
+				<div id="app-content" ng-view></div>
+			</div><!--.app-->
+		</div><!--.container-->
 		
 		<section id="javascript">
 			<!--Vendor-->

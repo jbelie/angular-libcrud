@@ -7,9 +7,15 @@ app.service('userProvider', function($firebaseAuth){
 	
 	
 	this.createUser = function(user){
+		var that = this;
 		auth.$createUser({
 			email : user.email,
 			password: user.password
+		})
+		.then(function(data){
+			that.authUser(user);
+		}).catch(function(error){
+			alert(error);
 		});
 	}
 	

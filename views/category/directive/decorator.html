@@ -1,3 +1,19 @@
-<p>Category : {{ category.name }}</p>
-<button ng-click="editCategory(category)">Edit</button>
-<button ng-click="removeCategory(category)">Remove</button>
+<li ng-class-odd="'odd'" ng-class-even="'even'">		
+	<div class="row">
+		<div class="col-md-8">
+			{{ category.name }}
+		</div>
+		<div class="col-md-2">
+			<button ng-click="editCategory(category)" class="button-inline">
+				<span class="glyphicon glyphicon-pencil light-black"></span>
+				Edit
+			</button>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="removeCategory(category)" class="button-inline">
+				<span class="glyphicon glyphicon-remove light-red"></span>
+				Delete
+			</button>
+		</div>
+	</div>
+</li>

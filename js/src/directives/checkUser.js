@@ -6,7 +6,7 @@ app.directive('checkUser', function($rootScope, $location, userProvider){
 			$rootScope.$on('$routeChangeStart',function(event, currRoute, prevRoute){
 				var auth = userProvider.getAuthData();
 				
-				if(!currRoute.access || currRoute.access.isFree || !auth || !auth.token){
+				if(currRoute.access && !currRoute.access.isFree && (auth===null || !auth.token)){
 					$location.url('/');
 				}
 			});

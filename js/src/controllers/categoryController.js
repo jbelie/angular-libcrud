@@ -6,7 +6,7 @@ app
 	})
 	.controller('categoryList', function($scope, $location, $rootScope, categoryProvider){
 		
-		$scope.categorys = categoryProvider.getCategories();
+		$scope.categories = categoryProvider.getCategories();
 		
 		$scope.removeCategory = function(category){
 			categoryProvider.removeCategory(category);

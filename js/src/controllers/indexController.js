@@ -5,7 +5,6 @@ app
 		
 		$scope.session = userProvider.getAuthData();
 		$scope.auth = userProvider.getAuth();
-
 		$scope.authUser = function(user){
 			userProvider.authUser(user);
 		}
@@ -21,9 +20,18 @@ app
 			}
 		});
 	})
-	.controller("indexCreateUser",function($scope, userProvider){
+	.controller("indexCreateUser",function($scope, $location, userProvider){
+		
+		$scope.auth = userProvider.getAuth();
 		
 		$scope.createUser = function(user){
 			userProvider.createUser(user);
 		}
+		
+		$scope.auth.$onAuth(function(authData){
+			if(authData){
+				$scope.session = authData;
+				$location.url('/');
+			}
+		});
 	});

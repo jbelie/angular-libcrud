@@ -1,3 +1,19 @@
-<p>Item : {{ item.name }}</p>
-<button ng-click="editItem(item)">Edit</button>
-<button ng-click="removeItem(item)">Remove</button>
+<li ng-class-odd="'odd'" ng-class-even="'even'">		
+	<div class="row">
+		<div class="col-md-8">
+			{{ item.name }}
+		</div>
+		<div class="col-md-2">
+			<button ng-click="editItem(item)" class="button-inline">
+				<span class="glyphicon glyphicon-pencil light-black"></span>
+				Edit
+			</button>
+		</div>
+		<div class="col-md-2">
+			<button ng-click="removeItem(item)" class="button-inline">
+				<span class="glyphicon glyphicon-remove light-red"></span>
+				Delete
+			</button>
+		</div>
+	</div>
+</li>
